@@ -6,11 +6,32 @@
   <title>Document</title>
 </head>
 <body>
-    <div>
+    <div id="comment-container">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quas necessitatibus temporibus et quae porro repudiandae? Eos quibusdam magnam voluptas? Maiores minus ab nisi ipsa iste omnis illum magni repellat laboriosam accusamus necessitatibus, neque molestiae, adipisci corporis nam maxime. Eos distinctio officiis facere similique consequuntur. Corporis ratione autem ipsam reiciendis.</p>
       <p>Repellat ipsam quae repudiandae harum accusamus placeat ducimus. Veniam, hic? Dolorem odit consectetur labore similique alias id! Alias nihil doloremque fuga, ea in repellat magni cumque sint culpa labore possimus nostrum dolor, voluptatibus consequatur corporis neque obcaecati voluptatum numquam dolorem? Rem dolorem, accusantium vel tenetur cupiditate esse reprehenderit natus deserunt!</p>
       <p>Beatae, sit rerum. Odio vitae consectetur rem maiores modi et illum tenetur minima tempora eaque repellendus similique, aliquam officiis sequi eius voluptatum velit at molestias quam, pariatur omnis totam laborum. Ad saepe quia culpa quo? Expedita ex, ipsa quibusdam quod ea impedit quidem commodi minus aspernatur amet adipisci cum numquam.</p>
+
+      <textarea name="" id="new-comment" rows="10" cols="60"></textarea>
+      <br>
+      <button id="btn">Post</button>
+
     </div>
+
+    <script>
+      document.getElementById('btn').addEventListener('click', function(){
+       const commentBox= document.getElementById('new-comment');
+       const newComment = commentBox.value;
+       
+       
+       const commentContainer = document.getElementById('comment-container');
+       const p = document.createElement('p');
+       p.innerText = newComment;
+
+       commentContainer.appendChild(p);
+      commentBox.value = "";
+
+      })
+    </script>
   
 </body>
 </html>
